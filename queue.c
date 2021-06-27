@@ -62,20 +62,29 @@ void displayList(List* list)
     
 }
 
-void sortList(List* list, int len)
+void sortList(List* list)
 {
-    int i, j;
-    Element *min_case = malloc(sizeof(*min_case));
+    Element *min_cell = malloc(sizeof(*min_cell));
+    Element *cell = malloc(sizeof(*cell));
     Element *tmp = malloc(sizeof(*tmp));
 
-    for (min_case = list->first; min_case->next!=NULL; min_case = min_case->next)
+    for (min_cell = list->first; min_cell->next != NULL; min_cell = min_cell->next)
     {
-        for ( j = 0; j < len; j++)
+        for (cell = min_cell; cell->next != NULL; cell = cell->next)
         {
-            if ()
+            if (cell->value < min_cell->value)
+            {
+                tmp = min_cell;
+                min_cell = cell;
+                cell = tmp;
+            }
         }
         
     }
+
+    free(min_cell);
+    free(cell);
+    free(tmp);
     
 
 }
