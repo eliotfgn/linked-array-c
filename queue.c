@@ -52,7 +52,7 @@ void displayList(List* list)
 
     current = list->first;
 
-    while (current->next != NULL)
+    while (current != NULL)
     {
         printf("%d ", current->value);
         current = current->next;
@@ -66,25 +66,22 @@ void sortList(List* list)
 {
     Element *min_cell = malloc(sizeof(*min_cell));
     Element *cell = malloc(sizeof(*cell));
-    Element *tmp = malloc(sizeof(*tmp));
+    int tmp;
 
-    for (min_cell = list->first; min_cell->next != NULL; min_cell = min_cell->next)
+    for (min_cell = list->first; min_cell != NULL; min_cell = min_cell->next)
     {
         for (cell = min_cell; cell->next != NULL; cell = cell->next)
         {
             if (cell->value < min_cell->value)
             {
-                tmp = min_cell;
-                min_cell = cell;
-                cell = tmp;
+                tmp = min_cell->value;
+                min_cell->value = cell->value;
+                cell->value = tmp;
             }
         }
         
     }
 
-    free(min_cell);
-    free(cell);
-    free(tmp);
     
 
 }

@@ -3,12 +3,14 @@
 
 int main(int argc, char const *argv[])
 {
-    List * linkedList = initList(2);
+    List * linkedList = initList(20);
 
     add(linkedList, 23);
     add(linkedList, 12);
-    add(linkedList, 2);
-    add(linkedList, 1233);
+    add(linkedList, 59);
+    add(linkedList, 9);
+    add(linkedList, 84);
+    displayList(linkedList);
     sortList(linkedList);
     displayList(linkedList);
     return 0;
