@@ -7,12 +7,15 @@ int main(int argc, char const *argv[])
 
     add(linkedList, 23);
     add(linkedList, 12);
-    add(linkedList, 59);
-    add(linkedList, 9);
-    add(linkedList, 84);
-    displayList(linkedList);
-    sortList(linkedList);
-    delete(linkedList, 9);
+    add(linkedList, 15);
+    add(linkedList, 12);
+    add(linkedList, 23);
+    add(linkedList, 20);
+    add(linkedList, 20);
+    add(linkedList, 20);
+    add(linkedList, 20);
+    add(linkedList, 20);
+    delete_(linkedList->first, 20);
     displayList(linkedList);
     return 0;
 }

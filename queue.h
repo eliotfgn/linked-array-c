@@ -14,6 +14,11 @@ struct List
 
 List * initList(int);
 void add(List*, int);
+void push(List*, int);
 void displayList(List*);
 void sortList(List*);
 void delete(List*, int);
+void delete_(Element*, int);
+List* invert(List*);
+int ispalindrome(List*);
+void set(List*);
