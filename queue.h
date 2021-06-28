@@ -16,3 +16,4 @@ List * initList(int);
 void add(List*, int);
 void displayList(List*);
 void sortList(List*);
+void delete(List*, int);

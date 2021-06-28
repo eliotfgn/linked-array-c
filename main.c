@@ -12,6 +12,7 @@ int main(int argc, char const *argv[])
     add(linkedList, 84);
     displayList(linkedList);
     sortList(linkedList);
+    delete(linkedList, 9);
     displayList(linkedList);
     return 0;
 }

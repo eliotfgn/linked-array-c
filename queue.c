@@ -81,7 +81,31 @@ void sortList(List* list)
         }
         
     }
+}
 
+void delete(List* list, int element)
+{
+    Element *current = malloc(sizeof(*current));
+    Element *prec = malloc(sizeof(*prec));
+
+    current = list->first;
+    prec->value=0;
+    prec->next=list->first;
+    while (current!=NULL)
+    {
+        if (current->value == element)
+        {
+            if (current == list->first)
+            {
+                list->first = current->next;
+            }
+            else
+            {
+                prec->next = current->next;
+            }
+        }
+        current = current->next;
+        prec = prec->next;
+    }
     
-
 }
