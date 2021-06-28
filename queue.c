@@ -140,7 +140,6 @@ void delete_(Element* list, int element)
             if (current == list)
             {
                 list = current->next;
-                printf("%d ", current->value);
             }
             else
             {
