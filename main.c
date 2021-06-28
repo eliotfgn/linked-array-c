@@ -12,10 +12,11 @@ int main(int argc, char const *argv[])
     add(linkedList, 23);
     add(linkedList, 20);
     add(linkedList, 20);
+    add(linkedList, 2);
     add(linkedList, 20);
     add(linkedList, 20);
-    add(linkedList, 20);
-    delete_(linkedList->first, 20);
+    displayList(linkedList);
+    set(linkedList);
     displayList(linkedList);
     return 0;
 }

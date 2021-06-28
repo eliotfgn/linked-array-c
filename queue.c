@@ -116,11 +116,16 @@ void delete(List* list, int element)
             else
             {
                 prec->next = current->next;
+                free(current);
+                current = prec->next;
             }
-            break;
         }
-        current = current->next;
-        prec = prec->next;
+        else
+        {
+            current = current->next;
+            prec = prec->next;
+        }
+        
     }
     
 }
@@ -132,24 +137,21 @@ void delete_(Element* list, int element)
 
     current = list;
     prec->value=0;
-    prec->next=list;
+    prec->next=current;
     while (current!=NULL)
     {
         if (current->value == element)
         {
-            if (current == list)
-            {
-                list = current->next;
-            }
-            else
-            {
-                prec->next = current->next;
-            }
+            prec->next = current->next;
+            free(current);
+            current = prec->next;
         }
-        current = current->next;
-        prec = prec->next;
-    }
-    
+        else
+        {
+            current = current->next;
+            prec = prec->next;
+        }
+    }    
 }
 
 
@@ -206,3 +208,4 @@ void set(List* list)
         }
     }
 }
+
