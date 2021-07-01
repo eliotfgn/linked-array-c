@@ -209,3 +209,28 @@ void set(List* list)
     }
 }
 
+List* concat(List* list1, List* list2)
+{
+    Element *l1_last = malloc(sizeof(*l1_last));
+
+    l1_last = list1->first;
+
+    while (l1_last->next!=NULL)
+    {
+        l1_last = l1_last->next;
+    }
+
+    l1_last->next = list2->first;
+    set(list1);
+    sortList(list1);
+
+    /*
+    displayList(list1);
+
+    
+    
+
+    displayList(list1);*/
+    
+    return list1;
+}

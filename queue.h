@@ -22,3 +22,4 @@ void delete_(Element*, int);
 List* invert(List*);
 int ispalindrome(List*);
 void set(List*);
+List* concat(List*, List*);
